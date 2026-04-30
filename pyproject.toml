@@ -1,0 +1,10 @@
+[project]
+name = "patch-pilot"
+version = "0.1.0"
+requires-python = ">=3.12"
+readme = "README.md"
+description = "This is an AI coding agent"
+dependencies = [
+    "google-genai==1.12.1",
+    "python-dotenv==1.1.0",
+]
