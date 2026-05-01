@@ -21,7 +21,7 @@ def main():
     )]
 
     client = genai.Client(api_key=api_key)
-    response = generate_content(client, messages)
+    response = generate_response(client, messages)
 
     if args.verbose:
         print(f"User prompt: {args.user_prompt}")
@@ -30,7 +30,7 @@ def main():
     print(response.text)
 
 
-def generate_content(client, messages):
+def generate_response(client, messages):
     response = client.models.generate_content(
         model="gemini-2.5-flash",
         contents=messages
